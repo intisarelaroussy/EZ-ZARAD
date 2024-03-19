@@ -9,7 +9,6 @@ export default function CreateF() {
   const navigate = useNavigate();
 
   const AddF = async () => {
-<<<<<<< HEAD
     try{
         const Fournisseur = {
             nameF:'nameF',
@@ -28,21 +27,6 @@ export default function CreateF() {
         console.log(data);
     }catch(error){
       console.log(error)
-=======
-    try {
-      const fournisseurData = {
-        nameF: nameF,
-        villeF: villeF,
-        telF: telF
-      };
-
-      const res = await axios.post('http://127.0.0.1:8000/api/Fournisseurs', fournisseurData);
-      if(res.data ==='message'){
-        navigate('/Fournisseurs')
-      }
-    } catch (error) {
-      console.log(error);
->>>>>>> a3f9ef0d7ffaacd53de7c1166f52f96537d2f3e4
     }
   }
 
@@ -70,18 +54,11 @@ export default function CreateF() {
             <input type="text" className="form-control" value={telF} onChange={(e) => setTelF(e.target.value)} />
           </div>
           <br></br>
-<<<<<<< HEAD
             <button
              onClick={AddF}
              id='btn' className="  form-control">Valid</button>
           </div>
-=======
-          <button
-            onClick={AddF}
-            id='btn' className="  form-control">Valid</button>
->>>>>>> a3f9ef0d7ffaacd53de7c1166f52f96537d2f3e4
         </div>
       </div>
-    </div>
   );
 }

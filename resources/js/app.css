@@ -1,9 +1,4 @@
-<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
-=======
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap'); 
-
->>>>>>> a3f9ef0d7ffaacd53de7c1166f52f96537d2f3e4
 * {
     box-sizing: border-box;
 }
@@ -22,11 +17,7 @@ body {
     padding: 0;
     font-size: 18px;
     color: #f8fafc;
-<<<<<<< HEAD
     background-color: #1e293b;
-=======
-    background-color:#1e293b;
->>>>>>> a3f9ef0d7ffaacd53de7c1166f52f96537d2f3e4
 }
 
 input {
@@ -52,8 +43,8 @@ input:focus {
     margin-left:7%;
     margin-right:7% ;
     margin-top: 3%;
-    
-    
+
+
 }
 #btn{
     background-color: #00a762;
@@ -210,11 +201,7 @@ table {
     width: 240px;
     background-color: #7c3aed;
     padding: 1rem ;
-<<<<<<< HEAD
     color: #f8fafc;
-=======
-    color: #f8fafc;
->>>>>>> a3f9ef0d7ffaacd53de7c1166f52f96537d2f3e4
 }
 
 #defaultLayout aside > a {
@@ -238,7 +225,7 @@ table {
 #defaultLayout header {
     height: 80px;
     padding: 2rem 3rem;
-    
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -286,7 +273,7 @@ table {
     background-color: hsl(207, 90%, 38%);
     margin-left: 32%;
     margin-top: 50px;
-    
+
   }
   .wrapper h1{
     font-size: 36px;
@@ -320,7 +307,7 @@ table {
     top: 30%;
     transform: translate(-50%);
     font-size: 20px;
-  
+
   }
   .wrapper .remember-forgot{
     display: flex;
@@ -331,12 +318,12 @@ table {
   .remember-forgot label input{
     accent-color: #fff;
     margin-right: 3px;
-  
+
   }
   .remember-forgot a{
     color: #fff;
     text-decoration: none;
-  
+
   }
   .remember-forgot a:hover{
     text-decoration: underline;
@@ -358,7 +345,7 @@ table {
     font-size: 14.5px;
     text-align: center;
     margin: 20px 0 15px;
-  
+
   }
   .register-link p a{
     color: #fff;

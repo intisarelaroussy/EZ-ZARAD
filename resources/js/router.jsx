@@ -2,8 +2,8 @@
 import { createBrowserRouter} from 'react-router-dom';
 import DefaultLayout from './page/DefaultLayout';
 import GuestLayout from './page/GuestLayout';
-import Fournisseurs from './components/fournisseurs/fournisseurs';
-import EditF from './components/fournisseurs/editF';
+import Fournisseurs from './components/fournisseurs/Fournisseurs';
+import EditF from './components/fournisseurs/EditF';
 import CreateF from './components/fournisseurs/CreateF';
 import Login from './components/Marche/Login';
 import NotFound from './components/Marche/NotFound';
@@ -34,7 +34,7 @@ const router = createBrowserRouter([
                 path: '/CreatF',
                 element :<CreateF />
             },
-            
+
             {
                 path: '/Fournisseurs',
                 element :<Fournisseurs />
@@ -48,8 +48,8 @@ const router = createBrowserRouter([
                 path: '/Edit/:MarchéId/CreateL',
                 element :<Livraisons />
             }
-            
-           
+
+
 
         ]
     },
@@ -66,9 +66,9 @@ const router = createBrowserRouter([
             }
         ]
     }
-    
+
 
 ])
-  
+
 
 export default router;
