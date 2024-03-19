@@ -39,16 +39,6 @@ class MarcheController extends Controller
 {
     public function storeMarche(Request $request)
     {
-        $request->validate([
-            'nomMarche' => 'required',
-            'nomEntreprise' => 'required',
-            'region' => 'required',
-            'ville' => 'required',
-            'capitale' => 'required',
-            'dateLivraison' => 'required',
-            'reponseBanque' => 'required',
-            'enregistrerMarche' => 'required'
-        ]);
         $marche = Marché::create($request->all());
         return response()->json($marche, 201);
     }

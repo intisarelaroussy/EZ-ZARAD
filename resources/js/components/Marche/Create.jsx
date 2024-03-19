@@ -2,14 +2,15 @@ import React, { useState } from 'react';
 
 export default function Create() {
     const [formData, setFormData] = useState({
-        nomMarche: '',
-        nomEntreprise: '',
+        name: '',
+        entreprise: '',
         region: '',
         ville: '',
-        capitale: '',
-        dateLivraison: '',
-        reponseBanque: false,
-        enregistrerMarche: false
+        capitale: 0,
+        R_B: '',
+        E_M: false,
+        done: false,
+        Date_fin_livraison:'',
     });
 
     const handleSubmit = (e) => {

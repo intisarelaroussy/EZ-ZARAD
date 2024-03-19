@@ -13,5 +13,4 @@ Route::post('Fournisseurs', [FournisseurController::class , 'store']);
 Route::delete('Fournisseurs/{fournisseur}', [FournisseurController::class, 'destroy']);
 Route::put('Fournisseurs/{fournisseur}', [FournisseurController::class, 'update']);
 Route::get('Fournisseurs/{fournisseur}', [FournisseurController::class, 'show']);
-// make a post route to create a new Marche
-Route::post('/marches', [FournisseurController::class, 'storeMarche']);
+Route::post('marches', [MarcheController::class, 'storeMarche']);
