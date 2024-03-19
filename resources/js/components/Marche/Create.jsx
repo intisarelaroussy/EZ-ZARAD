@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 
 export default function Create() {
     const [formData, setFormData] = useState({
@@ -13,9 +14,20 @@ export default function Create() {
         Date_fin_livraison:'',
     });
 
-    const handleSubmit = (e) => {
+    const [isLoading, setIsLoading] = useState(false);
+
+    const handleSubmit =  async(e) => {
         e.preventDefault();
-        console.log(formData);
+       try {
+              setIsLoading(true);
+              const response = await axios.post('/api/marches', formData);
+                console.log(response.data);
+       } catch (error) {
+              console.log(error);
+       }
+       finally{
+                setIsLoading(false);
+       }
     };
 
     const handleChange = (e) => {
@@ -124,8 +136,10 @@ export default function Create() {
                         </div>
                     </div>
 
-                    <button type="submit" id="btn" className="form-control">
-                        Valid
+                    <button
+                    disabled={isLoading}
+                    type="submit" id="btn" className="form-control">
+                    {isLoading ? 'En cours...' : 'Enregistrer'}
                     </button>
                 </form>
             </div>
