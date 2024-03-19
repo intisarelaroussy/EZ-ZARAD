@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Marché extends Model
+class Marche extends Model
 {
     use HasFactory;
     protected $fillable = [
@@ -17,7 +17,7 @@ class Marché extends Model
         'R_B',
         'E_M',
         'done',
-        'Date_fin_livraison'
+        'Date_fin_livraison',
     ];
 
 }

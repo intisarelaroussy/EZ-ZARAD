@@ -7,7 +7,7 @@ import EditF from './components/fournisseurs/EditF';
 import CreateF from './components/fournisseurs/CreateF';
 import Login from './components/Marche/Login';
 import NotFound from './components/Marche/NotFound';
-import Marche from './components/Marche/Marché';
+import Marche from './components/Marche/Marche';
 import Create from './components/Marche/Create';
 import Edit from './components/Marche/Edit';
 import Livraisons from './components/Livraison/CreateL';

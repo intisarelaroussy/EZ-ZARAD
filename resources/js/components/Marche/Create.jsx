@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 
 export default function Create() {
+    const [isLoading, setIsLoading] = useState(false);
     const [formData, setFormData] = useState({
         name: '',
         entreprise: '',
@@ -11,18 +12,15 @@ export default function Create() {
         R_B: '',
         E_M: false,
         done: false,
-        Date_fin_livraison:'',
-    });
-
-    const [isLoading, setIsLoading] = useState(false);
-
+        Date_fin_livraison:'',});
     const handleSubmit =  async(e) => {
         e.preventDefault();
        try {
-              setIsLoading(true);
-              const response = await axios.post('/api/marches', formData);
-                console.log(response.data);
-       } catch (error) {
+        setIsLoading(true);
+        
+        const response = await axios.post('/api/marches', formData);
+        console.log(response.data);
+    } catch(error) {
               console.log(error);
        }
        finally{
