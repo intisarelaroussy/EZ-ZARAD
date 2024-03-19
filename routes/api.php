@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FournisseurController;
+use App\Http\Controllers\MarcheController;
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
@@ -14,4 +15,4 @@ Route::delete('Fournisseurs/{fournisseur}', [FournisseurController::class, 'dest
 Route::put('Fournisseurs/{fournisseur}', [FournisseurController::class, 'update']);
 Route::get('Fournisseurs/{fournisseur}', [FournisseurController::class, 'show']);
 // make a post route to create a new Marche
-Route::post('/marches', [FournisseurController::class, 'storeMarche']);
+Route::post('/marches', [MarcheController::class, 'storeMarche']);
