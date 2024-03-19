@@ -4,33 +4,34 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\fournisseur;
-class fournisseurController extends Controller
+use App\Http\Requests\FournisseurRequest;
+
+class FournisseurController extends Controller
 {
-    public function index(){
+    public function index()
+    {
         return fournisseur::all();
     }
-    public function store(fournisseur $fournisseur){
-    
+
+    public function store(Request $request)
+    {
+        // Store the data from the request
         $fournisseur = fournisseur::create([
-            'name'=>$Request->name,
-            'villeF'=>$Request->name,
-            'telF'=>$Request->name
+            'nameF' => $request->input('nameF'),
+            'villeF' => $request->input('villeF'),
+            'telF' => $request->input('telF')
         ]);
-        return $fournisseur;
-    }
-    public function show(fournisseur $fournisseur){
-        return $fournisseur;
-    }
-    public function update(Request $Request){
-        $fournisseur ->update([
-            'name'=>$Request->name,
-            'villeF'=>$Request->name,
-            'telF'=>$Request->name
-        ]);
-        return $fournisseur;
-    }
-    public function destroy(fournisseur $fournisseur){
-        $fournisseur->delete();
-        return['message'=>'tu supprime fournisseur'];
-    }
+
+        // Return the created resource
+         return  'message';}
+         public function destroy(fournisseur $fournisseur){
+            $fournisseur->delete();
+            return 'deleted';
+        }
+        public function show(fournisseur $fournisseur){return $fournisseur;}
+        public function update(Request $request, fournisseur $fournisseur){
+            $fournisseur->update($request->all());
+            return response()->json(['message' => 'fournisseur updated']);
+        }
+
 }
