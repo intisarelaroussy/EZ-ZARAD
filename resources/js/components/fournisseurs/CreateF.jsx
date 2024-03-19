@@ -1,15 +1,15 @@
 import axios from 'axios';
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-
 export default function CreateF() {
-  const [nameF ,setnameF] = useState('');
-  const [villeF ,setvilleF] = useState('');
-  const [ telF ,settelF] = useState('');
+  const [nameF, setNameF] = useState('');
+  const [villeF, setVilleF] = useState('');
+  const [telF, setTelF] = useState('');
   const navigate = useNavigate();
 
   const AddF = async () => {
+<<<<<<< HEAD
     try{
         const Fournisseur = {
             nameF:'nameF',
@@ -28,38 +28,60 @@ export default function CreateF() {
         console.log(data);
     }catch(error){
       console.log(error)
+=======
+    try {
+      const fournisseurData = {
+        nameF: nameF,
+        villeF: villeF,
+        telF: telF
+      };
+
+      const res = await axios.post('http://127.0.0.1:8000/api/Fournisseurs', fournisseurData);
+      if(res.data ==='message'){
+        navigate('/Fournisseurs')
+      }
+    } catch (error) {
+      console.log(error);
+>>>>>>> a3f9ef0d7ffaacd53de7c1166f52f96537d2f3e4
     }
   }
 
   return (
-        <div>
+    <div>
       <nav className="navbar text-secondary justify-content-between">
-      <h3 >Nouveau Fournisseur</h3>
+        <h3>Nouveau Fournisseur</h3>
       </nav>
       <div id="Prodouts">
         <h5 className='text-center'>Créer Un Nouveau Fournisseur</h5>
         <br></br>
         <div>
           <div className="mb-3">
-            <label  className="form-label">Nom et Prénon </label>
-            <input type="text" className="form-control" value={nameF}  onChange={(e) => setnameF(e.target.value)}/>
+            <label className="form-label">Nom et Prénon </label>
+            <input type="text" className="form-control" value={nameF} onChange={(e) => setNameF(e.target.value)} />
           </div>
           <br></br>
           <div className="mb-3">
-            <label  className="form-label">Ville De Fournisseur</label>
-            <input type="text" className="form-control"  value={villeF}  onChange={(e) => setvilleF(e.target.value)}/>
+            <label className="form-label">Ville De Fournisseur</label>
+            <input type="text" className="form-control" value={villeF} onChange={(e) => setVilleF(e.target.value)} />
           </div>
           <br></br>
           <div className="mb-3">
-            <label  className="form-label">Télephone</label>
-            <input type="text" className="form-control" value={telF}  onChange={(e) => settelF(e.target.value)}/>
+            <label className="form-label">Télephone</label>
+            <input type="text" className="form-control" value={telF} onChange={(e) => setTelF(e.target.value)} />
           </div>
           <br></br>
+<<<<<<< HEAD
             <button
              onClick={AddF}
              id='btn' className="  form-control">Valid</button>
           </div>
+=======
+          <button
+            onClick={AddF}
+            id='btn' className="  form-control">Valid</button>
+>>>>>>> a3f9ef0d7ffaacd53de7c1166f52f96537d2f3e4
         </div>
-    </div>
-  )
+      </div>
+    </div>
+  );
 }

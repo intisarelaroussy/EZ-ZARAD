@@ -11,12 +11,19 @@ export default function EditF() {
 
   const getFournisseur = async () => {
     try {
+<<<<<<< HEAD
       const res = await fetch(/api/Fournisseurs/${FournisseurId});
       const data = await res.json();
       setFournisseur(data);
       if(data ==='fournisseur updated'){
         navigate('/Fournisseurs')
       }
+=======
+      const res = await fetch(`http://127.0.0.1:8000/api/Fournisseurs/${FournisseurId}`);
+      const data = await res.json();
+      setFournisseur(data);
+      
+>>>>>>> a3f9ef0d7ffaacd53de7c1166f52f96537d2f3e4
     } catch (error) {
       console.log(error);
     }
@@ -24,7 +31,11 @@ export default function EditF() {
 
   const UpdateF = async () => {
     try {
+<<<<<<< HEAD
       const res = await fetch(/api/Fournisseurs/${FournisseurId}, {
+=======
+      const res = await fetch(`http://127.0.0.1:8000/api/Fournisseurs/${FournisseurId}`, {
+>>>>>>> a3f9ef0d7ffaacd53de7c1166f52f96537d2f3e4
         method: "PUT",
         headers: {
           "Content-Type": "application/json"
@@ -36,7 +47,16 @@ export default function EditF() {
         })
       });
       const data = await res.json();
+<<<<<<< HEAD
       console.log(data);
+=======
+      console.log(data)
+
+      if(data.message==='fournisseur updated'){
+        navigate('/Fournisseurs')
+      }
+      
+>>>>>>> a3f9ef0d7ffaacd53de7c1166f52f96537d2f3e4
     } catch (error) {
       console.log(error);
     }

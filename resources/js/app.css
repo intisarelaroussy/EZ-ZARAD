@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+=======
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap'); 
+
+>>>>>>> a3f9ef0d7ffaacd53de7c1166f52f96537d2f3e4
 * {
     box-sizing: border-box;
 }
@@ -8,17 +13,20 @@ html, body, #root, #defaultLayout, #guestLayout {
 
 h1, h2, h3, h4, h5, h6, p {
     margin: 0;
-    color: #f6f9f7; ;
+    color: #f6f9f7;
 
 }
-
 body {
     font-family: "Roboto", sans-serif;
     margin: 0;
     padding: 0;
     font-size: 18px;
     color: #f8fafc;
+<<<<<<< HEAD
     background-color: #1e293b;
+=======
+    background-color:#1e293b;
+>>>>>>> a3f9ef0d7ffaacd53de7c1166f52f96537d2f3e4
 }
 
 input {
@@ -202,7 +210,11 @@ table {
     width: 240px;
     background-color: #7c3aed;
     padding: 1rem ;
+<<<<<<< HEAD
     color: #f8fafc;
+=======
+    color: #f8fafc;
+>>>>>>> a3f9ef0d7ffaacd53de7c1166f52f96537d2f3e4
 }
 
 #defaultLayout aside > a {
@@ -362,3 +374,9 @@ table {
   #Remember{
     margin-left: -5px;
   }
+  table {
+    background-color: #060e164b !important;
+    border: none !important;
+    color: #f8fafc !important;
+    backdrop-filter: blur(9px) !important;
+}
