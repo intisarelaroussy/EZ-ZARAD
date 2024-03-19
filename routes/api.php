@@ -20,3 +20,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::get('Fournisseurs',[FournisseurController::class,'index']);
 Route::post('Fournisseurs', [FournisseurController::class , 'store']);
+Route::delete('Fournisseurs/{fournisseur}', [FournisseurController::class, 'destroy']);
+Route::put('Fournisseurs/{fournisseur}', [FournisseurController::class, 'update']);
+Route::get('Fournisseurs/{fournisseur}', [FournisseurController::class, 'show']);

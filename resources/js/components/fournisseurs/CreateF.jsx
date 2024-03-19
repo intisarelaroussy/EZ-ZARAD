@@ -9,22 +9,28 @@ export default function CreateF() {
   const [ telF ,settelF] = useState('');
   const navigate = useNavigate();
 
-  const AddF = async (e) => {
-    e.preventDefault() ;
-    const Fournisseur = {
-      nameF,
-      villeF,
-      telF
-    };
+  const AddF = async () => {
     try{
-      await axios.post('/Api/Fournisseurs',Fournisseur);
-      navigate('/')
-      console.log('bravo')
+        const Fournisseur = {
+            nameF:'nameF',
+            villeF:'villeF',
+            telF:'0099893'
+        };
+        const res = await fetch(`/api/fournisseurs`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(Fournisseur)
+        });
+        const data = await res.json();
+        console.log(data);
     }catch(error){
       console.log(error)
     }
   }
-  
+
   return (
         <div>
       <nav className="navbar text-secondary justify-content-between">
@@ -33,7 +39,7 @@ export default function CreateF() {
       <div id="Prodouts">
         <h5 className='text-center'>Créer Un Nouveau Fournisseur</h5>
         <br></br>
-        <form onSubmit={(e) => AddF(e)}>
+        <div>
           <div className="mb-3">
             <label  className="form-label">Nom et Prénon </label>
             <input type="text" className="form-control" value={nameF}  onChange={(e) => setnameF(e.target.value)}/>
@@ -49,9 +55,10 @@ export default function CreateF() {
             <input type="text" className="form-control" value={telF}  onChange={(e) => settelF(e.target.value)}/>
           </div>
           <br></br>
-        
-            <button type="submit" id='btn' className="  form-control">Valid</button>
-          </form>
+            <button
+             onClick={AddF}
+             id='btn' className="  form-control">Valid</button>
+          </div>
         </div>
     </div>
   )
